@@ -11,7 +11,7 @@ public class PlayChord implements Runnable {
     private Synthesizer synth;
     private MidiChannel[] midiChannels;
     private Sequence currentSequence;
-    NextNoteObj Next;
+    ;
     Sound soundMesure1;
     Sound soundMesure2;
     Sound soundMesure3;
@@ -43,7 +43,6 @@ public class PlayChord implements Runnable {
         //midiChannels[0].programChange(inst[40].getPatch().getProgram());
 
         sequencer.open();
-        Next = new NextNoteObj();
     }
 
     @Override
@@ -97,7 +96,7 @@ public class PlayChord implements Runnable {
 
     public int playChord(String chord, int vel) throws Exception {
         int baseNote = -1;
-        switch (""+chord.charAt(0)) {
+        switch (""+ chord.charAt(0)) {
             case "c":
                 baseNote = 48;
                 break;
